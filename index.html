@@ -1,17 +1,48 @@
 <!DOCTYPE html>
-<html lang='fr'>
+<html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tout Culture</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer="defer"
+      src="http://minimal-footlight-search-widget.s3.ca-central-1.amazonaws.com/dist/index.js"
+    ></script>
+    <link
+      href="http://minimal-footlight-search-widget.s3.ca-central-1.amazonaws.com/dist/index.css"
+      rel="stylesheet"
+    />
   </head>
 
-  <body>
+  <body style="background-color: white">
     <header>
-      <h1>Événements au Québec</h1>
+      <h1>Événements Tout Culture</h1>
     </header>
+    <div
+      id="minimal-footlight-search-widget" 
+      data-api="staging.api.footlight.io" 
+      data-event-url="events/event-details.html?eventId=" 
+      data-org-url="organizations/org-details.html?orgId=" 
+      data-search-events-url="events/search-events.html" 
+      data-search-orgs-url="organizations/search-orgs.html"
+    ></div>
+    <a href="places/places.html">Places</a>
+    <a href="organizations/organizations.html">Organizations</a>
+    <a href="people/people.html">People</a>
 
-    <main>
-    </main>
-
-    <script src="js/index.js" type="module"></script>
+    <hr>
+    <h1>Featured followed by Upcoming (limit 10)</h1>
+    <h4>sort=desc(isFeatured),asc(startDateTime),asc(metadata.rarityScore)</h4>
+    <div class="event-list" data-param="&sort=desc(isFeatured),asc(startDateTime),asc(metadata.rarityScore)&limit=10"></div>
+    <hr>
+    <h1> Workshops/Courses</h1>
+    <div class="event-list" data-param="&type=64776b93fbeda20064d2332f&type=64776b93fbeda20064d23331&limit=100"></div>
+    <hr>
+    <h1>Free Events</h1>
+    <div class="event-list" data-param="&price-type=free&limit=100"></div>
+    <hr>
+    <h1>All Events except Workshop/Courses (limit 50)</h1>
+    <div class="event-list" data-param="&limit=50&exclude-type=64776b93fbeda20064d2332f&exclude-type=64776b93fbeda20064d23331"></div>
+    <script src="index.js" type="module"></script>
   </body>
 </html>
