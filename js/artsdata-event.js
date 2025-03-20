@@ -1,15 +1,15 @@
 class ArtsdataEvent extends HTMLElement {
   set event(event) {
     this.innerHTML = `<div>
-   
     <div class="box"><a href="${event.url}"><img src="${ event.image || '' }"></a></div>
     <h3> ${ event.nameFr|| event.nameEn}  ${ this.eventStatus(event.eventStatus) }</h3>
     <p> ${ this.dateFormat(event) } 
     <br>${ this.location(event.location) } 
      ${ this.attendanceMode(event.attendanceMode) } </p>
-   
     </div>`
   }
+
+  // below are helper functions
 
   eventStatus(eventStatus) {
     if (eventStatus != "EventScheduled")  {
@@ -18,7 +18,6 @@ class ArtsdataEvent extends HTMLElement {
       return ""
     }
   }
-
 
   attendanceMode(mode) {
     var html = ""
@@ -36,7 +35,6 @@ class ArtsdataEvent extends HTMLElement {
     html +=  new Date(event.startDate).toLocaleString('fr-FR',  { dateStyle: 'long', timeStyle: 'short', hour12: false, timeZone: 'EST' }) 
     return html
   }
-
 
   location(location) {
     var html = ""
