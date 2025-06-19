@@ -1,9 +1,11 @@
 Simple Website with feed of upcoming events in Quebec
 ==========
 
-This website demonstrates a simple use of the Artsdata Event Query API to display upcoming events in Quebec.
+This website demonstrates a simple use of the Artsdata Event Query API **BETA** to display upcoming events in Quebec.
 
 This demo is built with plain javascript and html/css. No frameworks or package managers.
+
+Please note that the Artsdata Event Query API may change or be discontinued in the future.
 
 To install
 ==========
