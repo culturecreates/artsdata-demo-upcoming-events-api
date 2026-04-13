@@ -1,8 +1,8 @@
 class ArtsdataEvent extends HTMLElement {
   set event(event) {
     this.innerHTML = `<div>
-    <div class="box"><a href="${event.url}"><img src="${ event.image || '' }"></a></div>
-    <h3> ${ event.nameFr|| event.nameEn}  ${ this.eventStatus(event.eventStatus) }</h3>
+    <div class="box"><a href="${event.id || '#' }"><img src="${ event?.image?.url?.id || '' }"></a></div>
+    <h3> ${ event.nameFr|| event.nameEn || event.namePref}  ${ this.eventStatus(event.eventStatus) }</h3>
     <p> ${ this.dateFormat(event) } 
     <br>${ this.location(event.location) } 
      ${ this.attendanceMode(event.attendanceMode) } </p>
