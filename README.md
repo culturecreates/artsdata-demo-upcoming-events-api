@@ -1,7 +1,10 @@
-Simple Website with feed of upcoming events in Quebec
+Simple Website with feed of upcoming events
 ==========
 
-This website demonstrates a simple use of the Artsdata Event Query API **BETA** to display upcoming events. It displays the next upcoming 10 events in Artsdata.
+This website demonstrates a simple use of the Artsdata Event Query API **BETA** to display upcoming events. It displays the next upcoming 10 events in Artsdata taking place at Theatre Maisonneuve in Montreal.
+
+The location is hardcoded in the file artsdataApi.js by passing the predicate `schema:location` and the object `adr:K11-11`. This sets the location to Theatre Maisonneuve (K11-11). The JSON data can be viewed here:
+https://api.artsdata.ca/events?format=json&apiKey=sandbox&frame=event_location&predicate=schema:location&object=adr:K11-11
 
 This demo is built with plain javascript and html/css. No frameworks or package managers.
 

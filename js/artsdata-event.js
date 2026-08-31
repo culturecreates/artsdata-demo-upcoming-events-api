@@ -13,7 +13,7 @@ class ArtsdataEvent extends HTMLElement {
 
   eventStatus(eventStatus) {
     if (eventStatus != "EventScheduled")  {
-      return ` - <span style='color: red;'>${eventStatus}</span> ` ;
+      return ` <span style='color: red;'>${eventStatus}</span> ` ;
     }  else {
       return ""
     }
